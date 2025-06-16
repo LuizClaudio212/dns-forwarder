@@ -35,7 +35,7 @@ O projeto está dividido em cinco arquivos, cada um representando uma etapa do d
 
 1. Clone o repositório:
 
-   git clone https://github.com/&lt;seu_usuario&gt;/dns-forwarder.git\
+   git clone https://github.com/LuizClaudio212/dns-forwarder
    cd dns-forwarder
 
 2. Instale o Python 3.x, se ainda não estiver instalado:
@@ -50,7 +50,7 @@ O projeto está dividido em cinco arquivos, cada um representando uma etapa do d
 
 4. Configure o firewall do Windows:
 
-   - Abra o Painel de Controle &gt; Sistema e Segurança &gt; Firewall do Windows Defender &gt; Configurações Avançadas.
+   - Abra o Painel de Controle ; Sistema e Segurança ; Firewall do Windows Defender ; Configurações Avançadas.
    - Crie uma regra de entrada para UDP, porta 1053, permitindo a conexão.
 
 ## Como Executar
