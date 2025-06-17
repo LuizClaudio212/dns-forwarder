@@ -18,16 +18,16 @@ Construir um DNS Forwarder que:
 
 O projeto está dividido em cinco arquivos, cada um representando uma etapa do desenvolvimento:
 
-- `step1_dns_forwarder.py`: Servidor UDP básico que escuta na porta especificada e imprime mensagens recebidas.
-- `step2_dns_forwarder.py`: Adiciona parsing do cabeçalho e da seção de perguntas do pacote DNS.
-- `step3_dns_forwarder.py`: Implementa o encaminhamento de solicitações para o servidor DNS upstream (8.8.8.8).
-- `step4_dns_forwarder.py`: Recebe respostas do servidor upstream e as retorna ao cliente.
-- `step5_dns_forwarder.py`: Adiciona cache com TTL para armazenar respostas e responder a partir do cache quando possível.
+   step1_dns_forwarder.py: Servidor UDP básico que escuta na porta especificada e imprime mensagens recebidas.
+   step2_dns_forwarder.py: Adiciona parsing do cabeçalho e da seção de perguntas do pacote DNS.
+   step3_dns_forwarder.py: Implementa o encaminhamento de solicitações para o servidor DNS upstream (8.8.8.8).
+   step4_dns_forwarder.py: Recebe respostas do servidor upstream e as retorna ao cliente.
+   step5_dns_forwarder.py: Adiciona cache com TTL para armazenar respostas e responder a partir do cache quando possível.
 
 ## Pré-requisitos
 
 - **Python 3.x** (testado com Python 3.13).
-- Sistema operacional: **Windows 10** (também compatível com Linux/Mac com ajustes mínimos).
+- Sistema operacional: **Windows 10** 
 - Ferramenta de teste: **dig** (parte do pacote BIND, disponível em https://www.isc.org/download/) ou `nslookup` (nativo no Windows).
 - Permissões de firewall: Libere a porta UDP 1053 no Windows Firewall para permitir tráfego.
 
