@@ -117,7 +117,7 @@ def check_cache(question):
         response, timestamp, ttl = cache[key]
         # Verifica se o TTL ainda é válido
         if time.time() < timestamp + ttl:
-            print(f"Resposta encontrada no cache (TTL restante: {int(timestamp + ttl - time.time())} segundos)")
+            print(f"Resposta encontrada no cache (TTL restante: {int(timestamp + ttl - time.time())} ms)")
             return response
         else:
             del cache[key]  # Remove entrada expirada
@@ -136,7 +136,7 @@ def store_in_cache(question, response, answers):
     # Usa o menor TTL das respostas, ou 3600 segundos se não houver respostas
     ttl = min(answer['ttl'] for answer in answers) if answers else 3600
     cache[key] = (response, time.time(), ttl)
-    print(f"Resposta armazenada no cache para {question['name']} com TTL {ttl} segundos")
+    print(f"Resposta armazenada no cache para {question['name']} com TTL {ttl} ms")
 
 def forward_request(data, client_address, server_socket, upstream_dns='8.8.8.8', upstream_port=53):
     """
